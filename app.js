@@ -8,7 +8,7 @@ function agregarAmigo(){
     let amigoIngresado = document.getElementById("amigo").value;
 
     //Valido que el campo no este vacio
-    if (amigoIngresado == "") {
+    if (amigoIngresado == " ") {
         alert("Por favor, inserte un nombre.");
 
     // Agrego el elemento al Array y vacio el campo
@@ -36,5 +36,19 @@ function actualizarLista() {
 
         lista.appendChild(li);
         
+    }
+}
+
+//Funcion para sortear amigos
+function sortearAmigo() {
+    //Verifico que el Array no este vacio
+    if (amigos.length > 0){
+        // Genero un numero aleatorio que sera el sorteado
+        let numeroSorteado = Math.floor(Math.random() * (amigos.length  - 1)) +1;
+        // Selecciono el amigo que coincide con el numero aleatorio
+        let amigoSorteado = amigos[numeroSorteado];
+        //Muestro el amigo sorteado
+        let resultado = document.getElementById("resultado");
+        resultado.innerHTML = amigoSorteado;
     }
 }
