@@ -44,7 +44,7 @@ function sortearAmigo() {
     //Verifico que el Array no este vacio
     if (amigos.length > 0){
         // Genero un numero aleatorio que sera el sorteado
-        let numeroSorteado = Math.floor(Math.random() * (amigos.length  - 1)) +1;
+        let numeroSorteado = Math.floor(Math.random() * amigos.length);
         // Selecciono el amigo que coincide con el numero aleatorio
         let amigoSorteado = amigos[numeroSorteado];
         //Muestro el amigo sorteado
